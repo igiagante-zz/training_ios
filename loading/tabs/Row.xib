@@ -36,7 +36,7 @@
                 <outlet property="name" destination="dLM-Nn-HQt" id="HOs-sD-tMW"/>
                 <outlet property="thumbnail" destination="AyG-7d-vLg" id="eZa-VQ-MF1"/>
             </connections>
-            <point key="canvasLocation" x="258" y="218"/>
+            <point key="canvasLocation" x="45" y="157"/>
         </tableViewCell>
     </objects>
 </document>
