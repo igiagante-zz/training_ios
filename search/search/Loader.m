@@ -47,6 +47,8 @@ static const NSString * PATH = @"https://api.mercadolibre.com/sites/MLU/search?q
     NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:url];
     request.HTTPMethod = @"GET";
     
+    __weak Loader *weakSelf = self;
+    
     NSURLSessionDataTask *dataTask = [session dataTaskWithRequest:request completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
         
         // Check HTTP status code
@@ -77,14 +79,14 @@ static const NSString * PATH = @"https://api.mercadolibre.com/sites/MLU/search?q
                     
                     dispatch_async(dispatch_get_main_queue(), ^{
                         [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
-                        [self performSelectorOnMainThread: @selector(notifyToProgressBar:)
+                        [weakSelf performSelectorOnMainThread: @selector(notifyToProgressBar:)
                                                withObject: @(value) waitUntilDone: NO];
                     });
                 }
                 
                 dispatch_async(dispatch_get_main_queue(), ^{
                     [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
-                    [self performSelectorOnMainThread: @selector(doNotification:) withObject: items waitUntilDone: NO];
+                    [weakSelf performSelectorOnMainThread: @selector(doNotification:) withObject: items waitUntilDone: NO];
                 });
                 
             } else {
