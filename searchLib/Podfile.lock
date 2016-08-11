@@ -1,0 +1,19 @@
+PODS:
+  - MBProgressHUD (1.0.0)
+  - searchLib (1.0.1)
+
+DEPENDENCIES:
+  - MBProgressHUD (~> 1.0.0)
+  - searchLib (from `./`)
+
+EXTERNAL SOURCES:
+  searchLib:
+    :path: "./"
+
+SPEC CHECKSUMS:
+  MBProgressHUD: 4890f671c94e8a0f3cf959aa731e9de2f036d71a
+  searchLib: df44afe9f63b3fa75e66a0e37605b5c00361de85
+
+PODFILE CHECKSUM: 7f20e22aab8f2b1e016537638979429e7d286e92
+
+COCOAPODS: 1.0.1

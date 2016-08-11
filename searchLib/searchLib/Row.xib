@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="100" id="Wf3-TO-EvM" customClass="Row">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Wf3-TO-EvM" id="xUg-gB-2ZQ">
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Ahq-zn-rIG">
+                        <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="103" id="LHh-SR-jYJ"/>
+                            <constraint firstAttribute="height" constant="83" id="xl4-CO-yy1"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="LHh-SR-jYJ"/>
+                                <exclude reference="xl4-CO-yy1"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="constraints">
+                                <include reference="LHh-SR-jYJ"/>
+                                <include reference="xl4-CO-yy1"/>
+                            </mask>
+                        </variation>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Luo-a5-Em6">
+                        <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Price" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p4d-nH-b2W">
+                        <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="Luo-a5-Em6" firstAttribute="centerY" secondItem="xUg-gB-2ZQ" secondAttribute="centerY" constant="-25" id="4ta-rY-P4J"/>
+                    <constraint firstItem="Ahq-zn-rIG" firstAttribute="leading" secondItem="xUg-gB-2ZQ" secondAttribute="leadingMargin" id="Pj8-4s-fzV"/>
+                    <constraint firstItem="p4d-nH-b2W" firstAttribute="leading" secondItem="Ahq-zn-rIG" secondAttribute="trailing" constant="21" id="TOD-ma-GvK"/>
+                    <constraint firstItem="p4d-nH-b2W" firstAttribute="top" secondItem="Luo-a5-Em6" secondAttribute="bottom" constant="28" id="btp-if-cf6"/>
+                    <constraint firstItem="Luo-a5-Em6" firstAttribute="leading" secondItem="Ahq-zn-rIG" secondAttribute="trailing" constant="21" id="g6R-C0-ioh"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="Luo-a5-Em6" secondAttribute="trailing" constant="40" id="kys-fU-TjM"/>
+                    <constraint firstItem="Ahq-zn-rIG" firstAttribute="top" secondItem="xUg-gB-2ZQ" secondAttribute="topMargin" id="vdN-2s-KBY"/>
+                </constraints>
+                <variation key="default">
+                    <mask key="subviews">
+                        <exclude reference="Ahq-zn-rIG"/>
+                        <exclude reference="Luo-a5-Em6"/>
+                        <exclude reference="p4d-nH-b2W"/>
+                    </mask>
+                    <mask key="constraints">
+                        <exclude reference="Pj8-4s-fzV"/>
+                        <exclude reference="vdN-2s-KBY"/>
+                        <exclude reference="4ta-rY-P4J"/>
+                        <exclude reference="g6R-C0-ioh"/>
+                        <exclude reference="kys-fU-TjM"/>
+                        <exclude reference="TOD-ma-GvK"/>
+                        <exclude reference="btp-if-cf6"/>
+                    </mask>
+                </variation>
+                <variation key="widthClass=compact">
+                    <mask key="subviews">
+                        <include reference="Ahq-zn-rIG"/>
+                        <include reference="Luo-a5-Em6"/>
+                        <include reference="p4d-nH-b2W"/>
+                    </mask>
+                    <mask key="constraints">
+                        <include reference="Pj8-4s-fzV"/>
+                        <include reference="vdN-2s-KBY"/>
+                        <include reference="4ta-rY-P4J"/>
+                        <include reference="g6R-C0-ioh"/>
+                        <include reference="kys-fU-TjM"/>
+                        <include reference="TOD-ma-GvK"/>
+                        <include reference="btp-if-cf6"/>
+                    </mask>
+                </variation>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="price" destination="p4d-nH-b2W" id="1Fa-8F-3VL"/>
+                <outlet property="thumbnail" destination="Ahq-zn-rIG" id="JSM-ir-nOG"/>
+                <outlet property="title" destination="Luo-a5-Em6" id="xgd-sM-F5Z"/>
+            </connections>
+            <point key="canvasLocation" x="-145" y="235"/>
+        </tableViewCell>
+    </objects>
+</document>
